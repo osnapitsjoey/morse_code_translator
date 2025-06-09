@@ -106,7 +106,7 @@ def translate_cli() -> None:
                 print('Goodbye.')
                 break
 
-            phrase_to_translate = input("Enter the word or phrase you'd like to translate\n")
+            phrase_to_translate: str = input("Enter the word or phrase you'd like to translate\n")
 
             if initialize.startswith('a') or initialize.startswith('b'):
                 
@@ -124,7 +124,7 @@ def translate_cli() -> None:
         except ValueError as ve:
             print(f"Error: {ve}")
             print("Please choose A, B, or E.\n")
-            translate_cli()  # restart the function
+            translate_cli()
         except Exception as e:
             print(f"Unexpected error: {e}")
             print("Something went wrong. Restarting...\n")
