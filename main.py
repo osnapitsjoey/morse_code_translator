@@ -125,11 +125,10 @@ def translate_cli() -> None:
         except ValueError as ve:
             print(f"Error: {ve}")
             print("Please choose A, B, or E.\n")
-            translate_cli()
+            
         except Exception as e:
             print(f"Unexpected error: {e}")
             print("Something went wrong. Restarting...\n")
-            translate_cli()
 
 
 if __name__ == "__main__":
