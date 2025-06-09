@@ -96,31 +96,32 @@ def morse_to_alphabet(user_input: str) -> str:
     return sentence.strip().capitalize()
 
 
-
-
 def translate_cli() -> None:
     while True:
         try:
-            initialize: str = input("Press (A) to translate a message to morse code\nPress (B) to translate morse code to letters\nPress (E) to exit\n").lower()
-            if initialize.startswith('e'):
-                print('Goodbye.')
+            initialize: str = input(
+                "Press (A) to translate a message to morse code\nPress (B) to translate morse code to letters\nPress (E) to exit\n"
+            ).lower()
+            if initialize.startswith("e"):
+                print("Goodbye.")
                 break
 
-            phrase_to_translate: str = input("Enter the word or phrase you'd like to translate\n")
+            phrase_to_translate: str = input(
+                "Enter the word or phrase you'd like to translate\n"
+            )
 
-            if initialize.startswith('a') or initialize.startswith('b'):
-                
-                if initialize.startswith('a'):
+            if initialize.startswith("a") or initialize.startswith("b"):
+                if initialize.startswith("a"):
                     result: str = alphabet_to_morse(user_input=phrase_to_translate)
                     print(f"Morse code generated\n {result}\n")
 
-                elif initialize.startswith('b'):
+                elif initialize.startswith("b"):
                     result: str = morse_to_alphabet(user_input=phrase_to_translate)
                     print(f"your decoded message\n {result}\n")
 
             else:
                 raise ValueError("Invalid Option")
-        
+
         except ValueError as ve:
             print(f"Error: {ve}")
             print("Please choose A, B, or E.\n")
@@ -129,7 +130,6 @@ def translate_cli() -> None:
             print(f"Unexpected error: {e}")
             print("Something went wrong. Restarting...\n")
             translate_cli()
-
 
 
 if __name__ == "__main__":
