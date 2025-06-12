@@ -1,3 +1,6 @@
+![blog-morse-code-151223](https://github.com/user-attachments/assets/217a244e-3ce5-44c7-b771-73157ab14b12)
+
+
 # Morse Code Translator
 
 A simple Python command-line tool to translate between English text and Morse code. Supports letters, numbers, and common punctuation.
